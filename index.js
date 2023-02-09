@@ -14,7 +14,7 @@ const publico = require(__dirname + '/routes/publico.js');
 const auth = require(__dirname + '/routes/auth.js');
 
 //Conexión con la BD
-mongoose.connect('mongodb://localhost:27017/playRestV3',
+mongoose.connect('mongodb://mymongodb/playRestV3',
     {useNewUrlParser: true});
 
 
