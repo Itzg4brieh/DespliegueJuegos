@@ -1,0 +1,24 @@
+
+{% extends "publico_base.njk" %}
+{% block titulo %}Juegos | Bienvenida{% endblock %}
+{% block contenido %}
+<div class="container">
+    <h1>Bienvenido al proyecto de Juegos</h1>
+    
+    <div>
+        <form action="/buscar/{{ juego.id }}" method="get" enctype="multipart/form-data">
+            <label>
+                <input type="text" class="form-label" name="buscar" placeholder="Introduce un juego a buscar" value=""/>
+            </label>
+            <button class="btn btn-success">Buscar</button>
+        </form>
+
+        <ul>
+            {% for juego in juegos%}
+                <li><a href="/juegos/{{ juego.id}}">{{ juego.nombre}} </a></li>         
+            {% endfor %}     
+        </ul>
+    </div>
+    
+</div>
+{% endblock %}

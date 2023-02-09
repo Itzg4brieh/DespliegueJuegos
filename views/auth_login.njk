@@ -1,0 +1,29 @@
+{% extends "publico_base.njk" %}
+
+{% block titulo %}Juegos | Nuevo{% endblock %}
+
+{% block contenido %}
+
+    <h1>Login de Usuario</h1>
+
+    {% if (error) %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <form action="/auth/login" method="post" enctype="multipart/form-data">
+        <div class="form-group mb-3" style="width: 500px;">
+            <label for="titulo">Usuario:</label>
+            <input type="text" class="form-control" name="titulo" 
+                placeholder="Nombre de usuario" />
+        </div>
+        <div class="form-group mb-3" style="width: 500px;">
+            <label for="editorial">Contraseña:</label>
+            <input type="text" class="form-control" name="editorial"
+                placeholder="Contraseña" />
+        </div>
+        <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+{% endblock %}

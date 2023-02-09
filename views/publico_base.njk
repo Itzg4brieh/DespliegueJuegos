@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% block titulo %} {% endblock %}</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/public/css/estilos.css"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="alert alert-secondary">
+                <a class="btn btn-dark" href="/">Inicio</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-dark" href="/juegos">Listado de juegos</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-dark" href="/juegos/nuevo">Nuevo juego</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-dark" href="/auth/login">Login</a>
+                &nbsp;&nbsp;
+                <a class="btn btn-dark" href="/juegos">Administración</a>
+            </div>
+            {% block contenido %}
+
+            {% endblock%}
+        </div>
+    </body>
+</html>

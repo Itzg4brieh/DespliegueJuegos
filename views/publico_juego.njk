@@ -1,0 +1,20 @@
+{% extends "publico_base.njk" %}
+
+{% block titulo %}Juegos | Bienvenida{% endblock %}
+
+{% block contenido %}
+
+    <h1>Ficha de juego</h1>
+    <div>
+        <p><img src="/public/imagenes/{{ juego.imagen }}" width="30%" /></p> 
+        <p><strong>Nombre: </strong> {{ juego.nombre }}</p>
+        <p><strong>Descripcion: </strong> {{ juego.descripcion }}</p>
+        <p><strong>Edad: </strong> {{ juego.edad }}</p>
+        <p><strong>Jugadores: </strong> {{ juego.jugadores }}</p>
+        <p><strong>Tipo: </strong> {{ juego.tipo }}</p>
+        <p><strong>Precio: </strong> {{ juego.precio }}</p>
+        <p><strong>Edicion: </strong> {{ edicion.edicion }}</p>
+        <p><strong>Año de la edición: </strong> {{ juego.edicion.anyo }}</p>
+    </div>
+    
+{% endblock%}
